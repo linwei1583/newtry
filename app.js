@@ -1,12 +1,6 @@
-const FEEDS = [
-  { key: 'markets', label: '全球市场', query: 'stock market OR bond market OR oil OR gold OR currency when:2d' },
-  { key: 'economy', label: '宏观经济', query: 'global economy OR inflation OR central bank OR interest rates when:2d' },
-  { key: 'business', label: '公司商业', query: 'global business OR companies OR earnings OR trade when:2d' },
-  { key: 'technology', label: '科技金融', query: 'technology business OR artificial intelligence companies OR semiconductor when:2d' },
-];
-const CACHE_KEY = 'market-brief-news-v1';
-const CACHE_TTL = 10 * 60 * 1000;
+const CACHE_KEY = 'market-brief-news-v2';
 const PAGE_SIZE = 12;
+const CATEGORY_LABELS = { markets: '全球市场', economy: '宏观经济', business: '公司商业', technology: '科技金融' };
 let articles = [];
 let activeCategory = 'all';
 let visibleLimit = PAGE_SIZE;
@@ -20,32 +14,6 @@ function setDate() {
   document.querySelector('#today-date').textContent = new Intl.DateTimeFormat('zh-CN', { year: 'numeric', month: 'short', day: 'numeric', weekday: 'short' }).format(new Date());
 }
 
-function cleanText(value = '') {
-  const doc = new DOMParser().parseFromString(value, 'text/html');
-  return (doc.body.textContent || '').replace(/\s+/g, ' ').trim();
-}
-
-function getSource(item) {
-  if (item.author && item.author.length < 48) return item.author;
-  try { return new URL(item.link).hostname.replace(/^www\./, ''); } catch { return '全球新闻'; }
-}
-
-function normalize(item, category) {
-  const title = cleanText(item.title);
-  const description = cleanText(item.description || item.content || '');
-  return { title, description: description.slice(0, 260), link: item.link, source: getSource(item), category, categoryLabel: FEEDS.find(feed => feed.key === category)?.label || '财经新闻', publishedAt: item.pubDate ? new Date(item.pubDate).getTime() : Date.now() };
-}
-
-async function fetchFeed(feed) {
-  const rssUrl = `https://news.google.com/rss/search?q=${encodeURIComponent(feed.query)}&hl=en-US&gl=US&ceid=US:en`;
-  const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
-  const response = await fetch(apiUrl, { signal: AbortSignal.timeout(12000) });
-  if (!response.ok) throw new Error(`${feed.label}: HTTP ${response.status}`);
-  const data = await response.json();
-  if (data.status !== 'ok') throw new Error(`${feed.label}: feed unavailable`);
-  return data.items.map(item => normalize(item, feed.key)).filter(item => item.title && item.link);
-}
-
 function setLoading(loading) {
   isLoading = loading;
   const button = document.querySelector('#refresh-btn');
@@ -56,33 +24,32 @@ function setLoading(loading) {
 async function loadNews(force = false) {
   if (isLoading) return;
   const cached = JSON.parse(localStorage.getItem(CACHE_KEY) || 'null');
-  if (!force && cached?.items?.length && Date.now() - cached.savedAt < CACHE_TTL) {
-    articles = cached.items;
-    render();
-    updateStatus('来自最近缓存');
-    return;
-  }
   setLoading(true);
-  updateStatus('正在连接全球新闻源…');
+  updateStatus(force ? '正在读取最新新闻数据…' : '正在读取新闻数据…');
   try {
-    const batches = await Promise.allSettled(FEEDS.map(fetchFeed));
-    const fetched = batches.flatMap(result => result.status === 'fulfilled' ? result.value : []);
-    if (!fetched.length) throw new Error('新闻源暂时不可用');
-    const unique = new Map();
-    fetched.sort((a, b) => b.publishedAt - a.publishedAt).forEach(item => { if (!unique.has(item.link)) unique.set(item.link, item); });
-    articles = [...unique.values()];
+    const response = await fetch(`data/news.json${force ? `?t=${Date.now()}` : ''}`, { cache: force ? 'no-store' : 'default' });
+    if (!response.ok) throw new Error(`新闻数据暂不可用 (${response.status})`);
+    const data = await response.json();
+    if (!Array.isArray(data.items)) throw new Error('新闻数据格式不正确');
+    articles = data.items.map(item => ({ ...item, categoryLabel: CATEGORY_LABELS[item.category] || '财经新闻', publishedAt: Date.parse(item.publishedAt) || Date.now() })).filter(item => item.title && item.link);
     localStorage.setItem(CACHE_KEY, JSON.stringify({ savedAt: Date.now(), items: articles }));
     render();
-    updateStatus(`${batches.filter(result => result.status === 'fulfilled').length}/${FEEDS.length} 个新闻频道已更新`);
-    document.querySelector('#last-updated').textContent = `更新于 ${new Intl.DateTimeFormat('zh-CN', { hour: '2-digit', minute: '2-digit' }).format(new Date())}`;
+    if (data.updatedAt) {
+      const updated = new Date(data.updatedAt);
+      document.querySelector('#last-updated').textContent = `数据更新于 ${new Intl.DateTimeFormat('zh-CN', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' }).format(updated)}`;
+      updateStatus('数据来自自动更新的全球 RSS 新闻源');
+    } else {
+      updateStatus('新闻数据尚未生成，请先运行 GitHub Actions 工作流');
+    }
   } catch (error) {
     if (cached?.items?.length) {
       articles = cached.items;
       render();
-      updateStatus('当前无法连接新闻源，显示已缓存内容');
+      updateStatus('暂时无法读取最新数据，显示浏览器缓存');
     } else {
-      updateStatus('新闻源暂时不可用，请稍后重试');
+      articles = [];
       render();
+      updateStatus('新闻数据尚不可用；请确认已运行 GitHub Actions，或稍后重试');
     }
   } finally { setLoading(false); }
 }
