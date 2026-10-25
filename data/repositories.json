@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25T08:14:56.028395+00:00",
+  "updatedAt": "2026-10-25T08:15:50.593574+00:00",
   "repositories": [
     {
       "rank": 1,
@@ -130,7 +130,7 @@
       "language": "TypeScript",
       "stars": 392981,
       "forks": 82608,
-      "pushedAt": "2026-10-25T08:14:49Z",
+      "pushedAt": "2026-10-25T08:15:19Z",
       "license": "MIT",
       "topics": [
         "ai",
@@ -150,7 +150,7 @@
       "url": "https://github.com/morluto/rea",
       "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
       "language": "TypeScript",
-      "stars": 380406,
+      "stars": 380408,
       "forks": 95104,
       "pushedAt": "2026-10-25T07:13:11Z",
       "license": "MIT",
