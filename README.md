@@ -1,27 +1,31 @@
-# Market Brief
+# GitHub Pulse
 
-一个无需构建步骤的静态全球财经新闻看板。页面按全球市场、宏观经济、公司商业和科技金融聚合 Google News RSS 搜索结果，支持分类筛选、关键词搜索、排序与本地缓存。
+一个展示 GitHub 全球最受关注公开仓库的静态网页。榜单按 GitHub `stargazers_count`（Star 数）降序取前 10 名，页面支持关键词搜索、语言筛选，以及按 Star、Fork 和最近更新时间重新排序。
 
-新闻由 GitHub Actions 在服务器端定时抓取 RSS，写入 `data/news.json`；浏览器只读取本站 JSON，不再请求 RSS 转换服务或外部新闻接口。
+## 数据更新
+
+GitHub Actions 每小时请求 GitHub REST API 的 Repository Search 接口，生成 `data/repositories.json` 并提交更新。修改程序文件推送到 `master` 时也会触发一次抓取；更新数据文件本身不会重复触发工作流。页面只读取仓库内的 JSON 数据，不会在访问者浏览器中调用 GitHub API。
+
+如需手动刷新，在仓库 **Actions → Update GitHub top repositories → Run workflow** 执行工作流。公开仓库 API 无需个人访问令牌；工作流令牌仅用于向当前仓库写入更新后的榜单。
 
 ## 本地运行
-
-启动任意静态文件服务器，例如：
 
 ```bash
 python -m http.server 8000
 ```
 
-然后访问 `http://localhost:8000`。要在本地生成新闻数据，运行：
+访问 `http://localhost:8000`。本地抓取最新榜单可运行：
 
 ```bash
-python scripts/fetch_news.py
+python scripts/fetch_repositories.py
 ```
 
-该脚本需要能够访问 Google News RSS。浏览器直接打开 `index.html` 时，浏览器通常会限制读取本地 JSON 文件，因此请使用静态服务器。
+本地脚本请求 GitHub 公共 API。若 API 不可达，会保留现有榜单 JSON，不覆盖为错误数据。
 
-## GitHub Pages 部署
+## GitHub Pages
 
-此项目为纯静态页面，可在仓库 **Settings → Pages** 中选择 `Deploy from a branch`，并选择默认分支的 `/ (root)` 作为发布来源。仓库 Actions 需允许工作流写入内容；首次运行可在 **Actions → Update finance news → Run workflow** 手动触发。之后工作流每小时运行一次并提交更新后的 JSON 文件。
+在仓库 **Settings → Pages** 中选择 `Deploy from a branch`，再将 `master` 分支的 `/ (root)` 设为发布来源。工作流需要有仓库内容写入权限。
 
-新闻标题、摘要和链接由 Google News RSS 返回；内容归原发布媒体所有。页面展示的市场快照为栏目提示，不代表实时行情数据。RSS 更新依赖 GitHub Actions 的调度和 Google News RSS 可用性。
+## 排名口径
+
+“关注度”按 GitHub Star 数衡量，返回 GitHub 搜索索引中 Star 数最高的十个公开、非 fork 仓库。它是累计 Star 排名，不是最近增长最快的 Trending 排名。数据更新时间取决于 GitHub Actions 调度情况。

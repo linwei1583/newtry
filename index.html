@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#101311" />
-    <meta name="description" content="汇集全球市场、商业与经济要闻的实时财经新闻看板。" />
-    <title>Market Brief — 全球财经新闻</title>
+    <meta name="description" content="按 Star 数查看 GitHub 全球最受关注的公开开源项目。" />
+    <title>GitHub Pulse — 热门开源项目</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -14,53 +14,29 @@
   <body>
     <div class="app-shell">
       <aside class="sidebar">
-        <a class="brand" href="#top" aria-label="Market Brief 首页">
-          <span class="brand-mark">M<span>·</span></span>
-          <span class="brand-name">market<span>brief</span></span>
-        </a>
-        <div class="side-label">工作台</div>
-        <nav class="nav-list" aria-label="新闻类别">
-          <button class="nav-item active" data-category="all"><span class="nav-icon">◫</span>今日要闻<span class="nav-count" id="all-count">—</span></button>
-          <button class="nav-item" data-category="markets"><span class="nav-icon">⌁</span>全球市场</button>
-          <button class="nav-item" data-category="economy"><span class="nav-icon">▤</span>宏观经济</button>
-          <button class="nav-item" data-category="business"><span class="nav-icon">◈</span>公司商业</button>
-          <button class="nav-item" data-category="technology"><span class="nav-icon">⌘</span>科技金融</button>
+        <a class="brand" href="#top" aria-label="GitHub Pulse 首页"><span class="brand-mark">GH<span>·</span></span><span class="brand-name">github<span>pulse</span></span></a>
+        <div class="side-label">发现开源</div>
+        <nav class="nav-list" aria-label="项目榜单">
+          <button class="nav-item active" data-language="all"><span class="nav-icon">◫</span>综合榜单<span class="nav-count" id="all-count">10</span></button>
+          <button class="nav-item" data-language="Python"><span class="nav-icon">⌁</span>Python</button>
+          <button class="nav-item" data-language="TypeScript"><span class="nav-icon">▤</span>TypeScript</button>
+          <button class="nav-item" data-language="JavaScript"><span class="nav-icon">◈</span>JavaScript</button>
+          <button class="nav-item" data-language="Go"><span class="nav-icon">⌘</span>Go</button>
         </nav>
-        <div class="sidebar-bottom">
-          <div class="source-card"><span class="live-dot"></span><div><strong>全球新闻源</strong><small>Google News · RSS</small></div></div>
-          <p class="side-footnote">新闻标题与摘要由发布媒体提供<br />点击卡片前往原文阅读。</p>
-        </div>
+        <div class="sidebar-bottom"><div class="source-card"><span class="live-dot"></span><div><strong>GitHub 公共数据</strong><small>REST API · Stars 排序</small></div></div><p class="side-footnote">榜单按累计 Star 数排序<br />点击项目卡片访问仓库。</p></div>
       </aside>
-
       <main class="main-content" id="top">
-        <header class="topbar">
-          <div class="breadcrumb">市场情报 <span>/</span> <strong>新闻终端</strong></div>
-          <div class="top-actions"><div class="date-chip"><span class="calendar-icon">▦</span><span id="today-date">—</span></div><button class="refresh-btn" id="refresh-btn"><span class="refresh-icon">↻</span><span>刷新新闻</span></button></div>
-        </header>
-
-        <section class="hero">
-          <div class="hero-copy"><div class="eyebrow"><span class="live-dot"></span>全球市场 · 实时简报</div><h1>看见市场，<span>读懂世界。</span></h1><p>全球重要财经新闻，一站掌握。</p></div>
-          <div class="hero-stamp"><span>MARKET</span><b>BRIEF</b><small>GLOBAL FINANCE · DAILY</small></div>
-        </section>
-
-        <section class="market-strip" aria-label="市场快照">
-          <div class="strip-heading"><span class="strip-pulse"></span>市场快照</div>
-          <div class="market-item"><span class="market-name">S&amp;P 500</span><span class="market-value">—</span><span class="market-change">关注新闻</span></div>
-          <div class="market-item"><span class="market-name">NASDAQ</span><span class="market-value">—</span><span class="market-change">关注新闻</span></div>
-          <div class="market-item"><span class="market-name">黄金</span><span class="market-value">—</span><span class="market-change">关注新闻</span></div>
-          <div class="market-item"><span class="market-name">原油 WTI</span><span class="market-value">—</span><span class="market-change">关注新闻</span></div>
-          <div class="strip-note">行情数据暂未接入</div>
-        </section>
-
+        <header class="topbar"><div class="breadcrumb">开源发现 <span>/</span> <strong>GitHub 热门项目</strong></div><div class="top-actions"><div class="date-chip"><span class="calendar-icon">▦</span><span id="today-date">—</span></div><button class="refresh-btn" id="refresh-btn"><span class="refresh-icon">↻</span><span>刷新榜单</span></button></div></header>
+        <section class="hero"><div class="hero-copy"><div class="eyebrow"><span class="live-dot"></span>开源项目 · 全球榜单</div><h1>发现值得关注的<span>开源项目。</span></h1><p>基于 GitHub Star 数，每小时更新全球最受关注的公开仓库。</p></div><div class="hero-stamp"><span>OPEN</span><b>SOURCE</b><small>GITHUB · TOP 10</small></div></section>
+        <section class="market-strip" aria-label="榜单概览"><div class="strip-heading"><span class="strip-pulse"></span>榜单概览</div><div class="market-item"><span class="market-name">收录项目</span><span class="market-value" id="repo-total">10</span><span class="market-change">TOP 10</span></div><div class="market-item"><span class="market-name">榜首 Star</span><span class="market-value" id="top-stars">—</span><span class="market-change">累计关注</span></div><div class="market-item"><span class="market-name">主要语言</span><span class="market-value" id="top-language">—</span><span class="market-change">榜单统计</span></div><div class="strip-note">按累计 Star 数降序</div></section>
         <section class="news-section">
-          <div class="section-heading"><div><div class="eyebrow muted">THE LATEST</div><h2>最新报道 <span class="result-count" id="result-count"></span></h2></div><div class="feed-tools"><label class="search-box"><span>⌕</span><input id="search-input" type="search" placeholder="搜索新闻…" aria-label="搜索新闻" /><kbd>/</kbd></label><select id="sort-select" aria-label="排序方式"><option value="newest">最新优先</option><option value="oldest">较早优先</option></select></div></div>
-          <div class="category-pills" id="category-pills"><button class="pill active" data-category="all">全部</button><button class="pill" data-category="markets">市场</button><button class="pill" data-category="economy">经济</button><button class="pill" data-category="business">商业</button><button class="pill" data-category="technology">科技</button></div>
-          <div class="status-line"><span id="feed-status"><span class="status-dot"></span>正在连接全球新闻源…</span><span id="last-updated"></span></div>
+          <div class="section-heading"><div><div class="eyebrow muted">MOST STARRED</div><h2>全球热门 TOP 10 <span class="result-count" id="result-count"></span></h2></div><div class="feed-tools"><label class="search-box"><span>⌕</span><input id="search-input" type="search" placeholder="搜索仓库或简介…" aria-label="搜索项目" /><kbd>/</kbd></label><select id="sort-select" aria-label="排序方式"><option value="stars">Star 数最高</option><option value="forks">Fork 数最高</option><option value="recent">最近更新</option></select></div></div>
+          <div class="category-pills" id="category-pills"><button class="pill active" data-language="all">全部语言</button><button class="pill" data-language="Python">Python</button><button class="pill" data-language="TypeScript">TypeScript</button><button class="pill" data-language="JavaScript">JavaScript</button><button class="pill" data-language="Go">Go</button></div>
+          <div class="status-line"><span id="feed-status"><span class="status-dot"></span>正在读取 GitHub 榜单…</span><span id="last-updated"></span></div>
           <div class="news-grid" id="news-grid" aria-live="polite"></div>
-          <div class="empty-state" id="empty-state" hidden><div class="empty-icon">⌕</div><h3>暂时没有找到相关新闻</h3><p>试试其他关键词或切换新闻类别。</p><button id="clear-search">清除筛选</button></div>
-          <div class="load-more-wrap"><button class="load-more" id="load-more" hidden>加载更多 <span>↓</span></button></div>
+          <div class="empty-state" id="empty-state" hidden><div class="empty-icon">⌕</div><h3>暂时没有找到项目</h3><p>试试其他关键词或切换编程语言。</p><button id="clear-search">清除筛选</button></div>
         </section>
-        <footer><span>MARKET BRIEF <i>·</i> 全球财经新闻</span><span>内容来自公开新闻 RSS · 新闻版权归原发布方所有</span></footer>
+        <footer><span>GITHUB PULSE <i>·</i> 开源项目榜单</span><span>数据来自 GitHub 公共 API · 榜单按 Star 数排序</span></footer>
       </main>
     </div>
     <script src="app.js"></script>
