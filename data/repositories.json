@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-27T05:13:32.428135+00:00",
+  "updatedAt": "2026-10-27T10:39:49.812439+00:00",
   "repositories": [
     {
       "rank": 1,
@@ -9,8 +9,8 @@
       "url": "https://github.com/codecrafters-io/build-your-own-x",
       "description": "Master programming by recreating your favorite technologies from scratch.",
       "language": "Markdown",
-      "stars": 556493,
-      "forks": 52095,
+      "stars": 556548,
+      "forks": 52098,
       "pushedAt": "2026-07-14T19:25:58Z",
       "license": "",
       "topics": [
@@ -30,8 +30,8 @@
       "url": "https://github.com/sindresorhus/awesome",
       "description": "😎 Awesome lists about all kinds of interesting topics [NOTE: Pull requests are temporarily disabled until I have a chance to catch up with the existing ones]",
       "language": null,
-      "stars": 525272,
-      "forks": 37789,
+      "stars": 525389,
+      "forks": 37796,
       "pushedAt": "2026-09-02T02:10:47Z",
       "license": "CC0-1.0",
       "topics": [
@@ -50,8 +50,8 @@
       "url": "https://github.com/public-apis/public-apis",
       "description": "A collective list of free APIs",
       "language": "Python",
-      "stars": 492485,
-      "forks": 54867,
+      "stars": 492544,
+      "forks": 54882,
       "pushedAt": "2026-10-24T09:30:33Z",
       "license": "MIT",
       "topics": [
@@ -78,9 +78,9 @@
       "url": "https://github.com/freeCodeCamp/freeCodeCamp",
       "description": "freeCodeCamp.org's open-source codebase and curriculum. Learn math, programming, and computer science for free.",
       "language": "TypeScript",
-      "stars": 458001,
-      "forks": 48667,
-      "pushedAt": "2026-10-26T20:34:15Z",
+      "stars": 458018,
+      "forks": 48678,
+      "pushedAt": "2026-10-27T08:45:56Z",
       "license": "BSD-3-Clause",
       "topics": [
         "careers",
@@ -108,8 +108,8 @@
       "url": "https://github.com/EbookFoundation/free-programming-books",
       "description": ":books: Freely available programming books",
       "language": "Python",
-      "stars": 400218,
-      "forks": 67015,
+      "stars": 400259,
+      "forks": 67021,
       "pushedAt": "2026-10-26T23:38:37Z",
       "license": "CC-BY-4.0",
       "topics": [
@@ -122,37 +122,15 @@
     },
     {
       "rank": 6,
-      "name": "openclaw",
-      "fullName": "openclaw/openclaw",
-      "owner": "openclaw",
-      "url": "https://github.com/openclaw/openclaw",
-      "description": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞 ",
-      "language": "TypeScript",
-      "stars": 393167,
-      "forks": 82663,
-      "pushedAt": "2026-10-27T05:13:23Z",
-      "license": "MIT",
-      "topics": [
-        "ai",
-        "assistant",
-        "crustacean",
-        "molty",
-        "openclaw",
-        "own-your-data",
-        "personal"
-      ]
-    },
-    {
-      "rank": 7,
       "name": "rea",
       "fullName": "morluto/rea",
       "owner": "morluto",
       "url": "https://github.com/morluto/rea",
       "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
       "language": "TypeScript",
-      "stars": 392804,
-      "forks": 98441,
-      "pushedAt": "2026-10-27T05:13:13Z",
+      "stars": 394345,
+      "forks": 98849,
+      "pushedAt": "2026-10-27T10:39:33Z",
       "license": "MIT",
       "topics": [
         "agent-skills",
@@ -178,6 +156,28 @@
       ]
     },
     {
+      "rank": 7,
+      "name": "openclaw",
+      "fullName": "openclaw/openclaw",
+      "owner": "openclaw",
+      "url": "https://github.com/openclaw/openclaw",
+      "description": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞 ",
+      "language": "TypeScript",
+      "stars": 393184,
+      "forks": 82665,
+      "pushedAt": "2026-10-27T10:38:38Z",
+      "license": "MIT",
+      "topics": [
+        "ai",
+        "assistant",
+        "crustacean",
+        "molty",
+        "openclaw",
+        "own-your-data",
+        "personal"
+      ]
+    },
+    {
       "rank": 8,
       "name": "system-design-primer",
       "fullName": "donnemartin/system-design-primer",
@@ -185,8 +185,8 @@
       "url": "https://github.com/donnemartin/system-design-primer",
       "description": "Learn how to design large-scale systems. Prep for the system design interview.  Includes Anki flashcards.",
       "language": "Python",
-      "stars": 375738,
-      "forks": 59011,
+      "stars": 375765,
+      "forks": 59013,
       "pushedAt": "2026-09-15T01:10:09Z",
       "license": "NOASSERTION",
       "topics": [
@@ -213,9 +213,9 @@
       "url": "https://github.com/nilbuild/developer-roadmap",
       "description": "Interactive roadmaps, guides and other educational content to help developers grow in their careers.",
       "language": "TypeScript",
-      "stars": 370505,
-      "forks": 45155,
-      "pushedAt": "2026-10-26T15:33:17Z",
+      "stars": 370521,
+      "forks": 45154,
+      "pushedAt": "2026-10-27T10:36:28Z",
       "license": "NOASSERTION",
       "topics": [
         "angular-roadmap",
@@ -246,8 +246,8 @@
       "url": "https://github.com/jwasham/coding-interview-university",
       "description": "A complete computer science study plan to become a software engineer.",
       "language": null,
-      "stars": 363434,
-      "forks": 85069,
+      "stars": 363436,
+      "forks": 85072,
       "pushedAt": "2025-08-28T14:42:47Z",
       "license": "CC-BY-SA-4.0",
       "topics": [
