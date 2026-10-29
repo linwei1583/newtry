@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-29T18:58:57.320264+00:00",
+  "updatedAt": "2026-10-29T23:20:40.960505+00:00",
   "repositories": [
     {
       "rank": 1,
@@ -9,8 +9,8 @@
       "url": "https://github.com/codecrafters-io/build-your-own-x",
       "description": "Master programming by recreating your favorite technologies from scratch.",
       "language": "Markdown",
-      "stars": 557324,
-      "forks": 52154,
+      "stars": 557361,
+      "forks": 52155,
       "pushedAt": "2026-07-14T19:25:58Z",
       "license": "",
       "topics": [
@@ -30,8 +30,8 @@
       "url": "https://github.com/sindresorhus/awesome",
       "description": "😎 Awesome lists about all kinds of interesting topics [NOTE: Pull requests are temporarily disabled until I have a chance to catch up with the existing ones]",
       "language": null,
-      "stars": 526743,
-      "forks": 37875,
+      "stars": 526836,
+      "forks": 37879,
       "pushedAt": "2026-09-02T02:10:47Z",
       "license": "CC0-1.0",
       "topics": [
@@ -50,8 +50,8 @@
       "url": "https://github.com/public-apis/public-apis",
       "description": "A collective list of free APIs",
       "language": "Python",
-      "stars": 493227,
-      "forks": 55000,
+      "stars": 493258,
+      "forks": 55008,
       "pushedAt": "2026-10-29T14:36:24Z",
       "license": "MIT",
       "topics": [
@@ -78,8 +78,8 @@
       "url": "https://github.com/freeCodeCamp/freeCodeCamp",
       "description": "freeCodeCamp.org's open-source codebase and curriculum. Learn math, programming, and computer science for free.",
       "language": "TypeScript",
-      "stars": 458187,
-      "forks": 48723,
+      "stars": 458192,
+      "forks": 48721,
       "pushedAt": "2026-10-29T17:20:10Z",
       "license": "BSD-3-Clause",
       "topics": [
@@ -108,9 +108,9 @@
       "url": "https://github.com/morluto/rea",
       "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
       "language": "TypeScript",
-      "stars": 406951,
-      "forks": 101916,
-      "pushedAt": "2026-10-29T18:51:07Z",
+      "stars": 407645,
+      "forks": 102073,
+      "pushedAt": "2026-10-29T22:49:39Z",
       "license": "MIT",
       "topics": [
         "agent-skills",
@@ -143,8 +143,8 @@
       "url": "https://github.com/EbookFoundation/free-programming-books",
       "description": ":books: Freely available programming books",
       "language": "Python",
-      "stars": 400483,
-      "forks": 67028,
+      "stars": 400486,
+      "forks": 67029,
       "pushedAt": "2026-10-27T20:40:54Z",
       "license": "CC-BY-4.0",
       "topics": [
@@ -163,9 +163,9 @@
       "url": "https://github.com/openclaw/openclaw",
       "description": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞 ",
       "language": "TypeScript",
-      "stars": 393362,
-      "forks": 82691,
-      "pushedAt": "2026-10-29T18:56:45Z",
+      "stars": 393380,
+      "forks": 82689,
+      "pushedAt": "2026-10-29T23:20:32Z",
       "license": "MIT",
       "topics": [
         "ai",
@@ -185,8 +185,8 @@
       "url": "https://github.com/donnemartin/system-design-primer",
       "description": "Learn how to design large-scale systems. Prep for the system design interview.  Includes Anki flashcards.",
       "language": "Python",
-      "stars": 376095,
-      "forks": 59060,
+      "stars": 376114,
+      "forks": 59061,
       "pushedAt": "2026-09-15T01:10:09Z",
       "license": "NOASSERTION",
       "topics": [
@@ -213,8 +213,8 @@
       "url": "https://github.com/nilbuild/developer-roadmap",
       "description": "Interactive roadmaps, guides and other educational content to help developers grow in their careers.",
       "language": "TypeScript",
-      "stars": 370727,
-      "forks": 45157,
+      "stars": 370740,
+      "forks": 45156,
       "pushedAt": "2026-10-28T12:18:10Z",
       "license": "NOASSERTION",
       "topics": [
@@ -246,8 +246,8 @@
       "url": "https://github.com/jwasham/coding-interview-university",
       "description": "A complete computer science study plan to become a software engineer.",
       "language": null,
-      "stars": 363517,
-      "forks": 85109,
+      "stars": 363529,
+      "forks": 85117,
       "pushedAt": "2025-08-28T14:42:47Z",
       "license": "CC-BY-SA-4.0",
       "topics": [
