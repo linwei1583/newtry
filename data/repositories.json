@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T23:28:20.527996+00:00",
+  "updatedAt": "2026-11-11T06:38:14.537955+00:00",
   "repositories": [
     {
       "rank": 1,
@@ -9,8 +9,8 @@
       "url": "https://github.com/codecrafters-io/build-your-own-x",
       "description": "Master programming by recreating your favorite technologies from scratch.",
       "language": "Markdown",
-      "stars": 561607,
-      "forks": 52549,
+      "stars": 561655,
+      "forks": 52554,
       "pushedAt": "2026-11-08T16:38:15Z",
       "license": "",
       "topics": [
@@ -30,8 +30,8 @@
       "url": "https://github.com/sindresorhus/awesome",
       "description": "😎 Awesome lists about all kinds of interesting topics [NOTE: Pull requests are temporarily disabled until I have a chance to catch up with the existing ones]",
       "language": null,
-      "stars": 534859,
-      "forks": 38289,
+      "stars": 535006,
+      "forks": 38298,
       "pushedAt": "2026-09-02T02:10:47Z",
       "license": "CC0-1.0",
       "topics": [
@@ -50,8 +50,8 @@
       "url": "https://github.com/public-apis/public-apis",
       "description": "A collective list of free APIs",
       "language": "Python",
-      "stars": 497930,
-      "forks": 55712,
+      "stars": 498047,
+      "forks": 55727,
       "pushedAt": "2026-11-07T19:45:54Z",
       "license": "MIT",
       "topics": [
@@ -78,7 +78,7 @@
       "url": "https://github.com/freeCodeCamp/freeCodeCamp",
       "description": "freeCodeCamp.org's open-source codebase and curriculum. Learn math, programming, and computer science for free.",
       "language": "TypeScript",
-      "stars": 458946,
+      "stars": 458964,
       "forks": 47445,
       "pushedAt": "2026-11-10T22:23:32Z",
       "license": "BSD-3-Clause",
@@ -108,9 +108,9 @@
       "url": "https://github.com/morluto/rea",
       "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
       "language": "TypeScript",
-      "stars": 449874,
-      "forks": 110741,
-      "pushedAt": "2026-11-10T23:24:30Z",
+      "stars": 450721,
+      "forks": 110905,
+      "pushedAt": "2026-11-11T06:32:13Z",
       "license": "MIT",
       "topics": [
         "agent-skills",
@@ -143,8 +143,8 @@
       "url": "https://github.com/EbookFoundation/free-programming-books",
       "description": ":books: Freely available programming books",
       "language": "Python",
-      "stars": 401459,
-      "forks": 67573,
+      "stars": 401473,
+      "forks": 67602,
       "pushedAt": "2026-11-07T19:10:09Z",
       "license": "CC-BY-4.0",
       "topics": [
@@ -163,9 +163,9 @@
       "url": "https://github.com/openclaw/openclaw",
       "description": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞 ",
       "language": "TypeScript",
-      "stars": 394297,
-      "forks": 82861,
-      "pushedAt": "2026-11-10T23:27:56Z",
+      "stars": 394314,
+      "forks": 82866,
+      "pushedAt": "2026-11-11T06:33:51Z",
       "license": "MIT",
       "topics": [
         "ai",
@@ -185,8 +185,8 @@
       "url": "https://github.com/donnemartin/system-design-primer",
       "description": "Learn how to design large-scale systems. Prep for the system design interview.  Includes Anki flashcards.",
       "language": "Python",
-      "stars": 377584,
-      "forks": 59264,
+      "stars": 377607,
+      "forks": 59267,
       "pushedAt": "2026-09-15T01:10:09Z",
       "license": "NOASSERTION",
       "topics": [
@@ -213,8 +213,8 @@
       "url": "https://github.com/nilbuild/developer-roadmap",
       "description": "Interactive roadmaps, guides and other educational content to help developers grow in their careers.",
       "language": "TypeScript",
-      "stars": 371756,
-      "forks": 45812,
+      "stars": 371774,
+      "forks": 45861,
       "pushedAt": "2026-11-10T11:25:05Z",
       "license": "NOASSERTION",
       "topics": [
@@ -246,8 +246,8 @@
       "url": "https://github.com/jwasham/coding-interview-university",
       "description": "A complete computer science study plan to become a software engineer.",
       "language": null,
-      "stars": 364195,
-      "forks": 85596,
+      "stars": 364220,
+      "forks": 85622,
       "pushedAt": "2026-11-07T16:03:02Z",
       "license": "CC-BY-SA-4.0",
       "topics": [
